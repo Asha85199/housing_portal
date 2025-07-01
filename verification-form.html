@@ -102,12 +102,12 @@
     </style>
    <div class="main-container d-flex flex-column justify-content-center align-items-center" >
       <div class="adharContainer p-3 card " id="adharNumberVerification">
-            <div>
+            <div class="d-flex flex-row">
                  <label style="margin-right: 5px;"><b>Enter Aadhaar Number:</b></label>
                  <input type="text" placeholder="Aadhaar" style=" padding-left: 10px;width: 150px;" id="adharOtp"><br>
-                 <p id="demo"></p>
             </div>
-            <div class="d-flex flex-row justify-content-center mb-2 ">
+            <p id="demo"></p>
+            <div class="d-flex flex-row justify-content-center mb-2 mt-2">
                  <button type="button" class="send-button1" onclick="sendOtpElement()">Send OTP</button>
             </div>
             <div class="d-flex flex-row justify-content-center">
@@ -122,11 +122,11 @@
             </div>
         </div>
         <div class="mobileContainer card mt-3 p-3" id="phoneNumberVerification">
-            <div>
+            <div class="d-flex flex-row">
                  <label style="margin-right: 5px;"><b>Enter Mobile Number:</b></label>
                  <input type="text" placeholder="mobile" style=" padding-left: 10px;width: 150px;" id="mobileNumber"><br>
-                 <p id="demo1"></p>
             </div>
+            <p id="demo1"></p>
             <div class="d-flex flex-row justify-content-center mt-2 mb-3">
                  <button type="button" class="send-button2" onclick="secondNextButton()">Send OTP</button>
             </div>
