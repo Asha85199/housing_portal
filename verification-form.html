@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main-container
+{
+    height:100vh;
+    width: 100vw;
+    background-image:url("https://i.postimg.cc/nV7swmcj/society1.jpg");
+    background-size: cover;
+}
+.mobileContainer
+{
+    display: none !important;
+}
+.gh-classname
+ {
+    display: flex !important;
+    flex-direction: column;
+ }
+ 
+ .next-button1 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: rgba(95, 95, 231, 0.841);
+ }
+ .send-button1 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:rgba(217, 7, 7, 0.792);
+ }
+ .verify-button1 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:rgba(0, 128, 0, 0.77);
+ }
+.next-button2 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: rgba(95, 95, 231, 0.841);
+ }
+ .send-button2 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:rgba(217, 7, 7, 0.792);
+ }
+ .verify-button2 {
+    width: 80px;
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:rgba(0, 128, 0, 0.77);
+ }
+    </style>
+   <div class="main-container d-flex flex-column justify-content-center align-items-center" >
+      <div class="adharContainer p-3 card " id="adharNumberVerification">
+            <div>
+                 <label style="margin-right: 5px;"><b>Enter Aadhaar Number:</b></label>
+                 <input type="text" placeholder="Aadhaar" style=" padding-left: 10px;width: 150px;" id="adharOtp"><br>
+                 <p id="demo"></p>
+            </div>
+            <div class="d-flex flex-row justify-content-center mb-2 ">
+                 <button type="button" class="send-button1" onclick="sendOtpElement()">Send OTP</button>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                 <label style="margin-right: 5px; margin-top:2px;"><b>Enter OTP:</b></label>
+                 <input type="text" placeholder="OTP" style="height:28px; padding-left: 10px;"><br>
+            </div> 
+            <div class="d-flex flex-row justify-content-center mt-2">
+                  <button type="button" class="verify-button1">Verify OTP</button>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                    <button type="button" class="next-button1" onclick="firstNextButton()">Next</button>
+            </div>
+        </div>
+        <div class="mobileContainer card mt-3 p-3" id="phoneNumberVerification">
+            <div>
+                 <label style="margin-right: 5px;"><b>Enter Mobile Number:</b></label>
+                 <input type="text" placeholder="mobile" style=" padding-left: 10px;width: 150px;" id="mobileNumber"><br>
+                 <p id="demo1"></p>
+            </div>
+            <div class="d-flex flex-row justify-content-center mt-2 mb-3">
+                 <button type="button" class="send-button2" onclick="secondNextButton()">Send OTP</button>
+            </div>
+            <div class=" d-flex flex-row justify-content-center">
+                 <label style="margin-right: 5px; margin-top:2px;"><b>Enter OTP:</b></label>
+                 <input type="text" placeholder="OTP"  style="height:28px; padding-left: 10px;"><br>
+            </div> 
+            <div class="d-flex flex-row justify-content-center mt-2">
+                  <button type="button" class="verify-button2">Verify OTP</button>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                    <button type="button" class="next-button2"><a style="text-decoration: none; color:white" href="submit-form.html">Next</a></button>
+            </div>
+        </div>
+  </div>
+   
+        <script>
+            let phoneNumberVerificationForm=document.getElementById("phoneNumberVerification");
+            let adharNumberVerificationForm=document.getElementById("adharNumberVerification");
+            let redColorText=document.getElementById("demo");
+            let adharOtpElement=document.getElementById("adharOtp");
+            let mobileOtpElement=document.getElementById("mobileNumber");
+            let redColorText1=document.getElementById("demo1");
+            function firstNextButton() {
+                adharNumberVerificationForm.style.display="none";
+                phoneNumberVerificationForm.classList.add("gh-classname");
+            }
+            function sendOtpElement() {
+                let enteredInput = adharOtpElement.value
+                if (enteredInput.length === 0 || enteredInput.length<=11) {
+                    redColorText.innerHTML="*please enter 12 digit adhaar number";
+                    redColorText.style.color = "red";
+                    redColorText.style.fontSize = "12px";
+                    redColorText.style.fontFamily = "cursive";
+
+                }
+                else if (enteredInput.length === 12) {
+                    redColorText.innerHTML = "";
+                }
+            }
+            function secondNextButton(){
+                let enteredMobile = mobileOtpElement.value;
+                if(enteredMobile.length === 0 ||enteredMobile.length<=9){
+                    redColorText1.textContent="*Please Enter your valid mobile number";
+                    redColorText1.style.color="red";
+                    redColorText1.style.fontSize="12px";
+                    redColorText1.style.fontFamily="cursive";
+
+                }else if(enteredMobile.length === 10) {
+                    redColorText1.textContent="";
+                }
+            }
+        </script>
+</body>
+</html>
